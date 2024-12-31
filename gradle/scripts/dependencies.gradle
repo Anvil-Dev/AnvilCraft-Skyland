@@ -1,0 +1,12 @@
+dependencies {
+    // Registrate
+    api "com.tterrag.registrate:Registrate:${registrate_version}"
+    jarJar "com.tterrag.registrate:Registrate:${registrate_version}"
+
+    // AnvilCraft
+    implementation "dev.dubhe:anvilcraft-neoforge-1.21.1:${anvilcraft_version}"
+
+    // AnvilLib
+    implementation "dev.anvilcraft.lib:anvillib-neoforge-1.21.1:${anvillib_version}"
+    jarJar "dev.anvilcraft.lib:anvillib-neoforge-1.21.1:${anvillib_version}"
+}
