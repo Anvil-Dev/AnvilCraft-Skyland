@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "skyland:block/stone_anvil",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "skyland:block/stone_anvil",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "skyland:block/stone_anvil"
+    },
+    "facing=west": {
+      "model": "skyland:block/stone_anvil",
+      "y": 90
+    }
+  }
+}

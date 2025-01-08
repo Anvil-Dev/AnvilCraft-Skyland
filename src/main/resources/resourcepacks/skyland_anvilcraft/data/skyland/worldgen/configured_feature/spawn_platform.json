@@ -1,0 +1,14 @@
+{
+  "type": "skyland:spawn_platform",
+  "config": {
+    "platform": {
+      "structure": "skyland:spawn_platform_anvilcraft",
+      "pos": [
+        -4,
+        63,
+        -1
+      ]
+    },
+    "spawn_relative": true
+  }
+}

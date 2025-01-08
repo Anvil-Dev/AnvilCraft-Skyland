@@ -9,4 +9,7 @@ dependencies {
     // AnvilLib
     implementation "dev.anvilcraft.lib:anvillib-neoforge-1.21.1:${anvillib_version}"
     jarJar "dev.anvilcraft.lib:anvillib-neoforge-1.21.1:${anvillib_version}"
+
+    // Rolling Gate
+    implementation "dev.anvilcraft.rg:RollingGate:${rolling_gate_version}"
 }

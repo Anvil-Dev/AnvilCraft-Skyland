@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "skyland:moss"
+    },
+    {
+      "item": "skyland:moss"
+    },
+    {
+      "item": "skyland:moss"
+    },
+    {
+      "item": "skyland:moss"
+    },
+    {
+      "item": "skyland:moss"
+    },
+    {
+      "item": "skyland:moss"
+    },
+    {
+      "item": "skyland:moss"
+    },
+    {
+      "item": "skyland:moss"
+    },
+    {
+      "item": "skyland:moss"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:moss_block"
+  }
+}

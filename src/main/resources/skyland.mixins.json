@@ -1,13 +1,23 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "dev.anvilcraft.skyland.skyland.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "package": "dev.anvilcraft.skyland.mixin",
+  "compatibilityLevel": "JAVA_21",
   "refmap": "skyland.refmap.json",
   "mixins": [
+    "ChunkGeneratorAccessor",
+    "EnderDragonFightMixin",
+    "JigsawStructureAccessor",
+    "MinecraftServerMixin",
+    "PlacementContextMixin",
+    "SinglePoolElementAccessor",
+    "integration.anvilcraft.AxeItemMixin",
+    "integration.anvilcraft.HoeItemMixin"
   ],
   "client": [
+    "CreateWorldScreenMixin"
   ],
+  "plugin": "dev.anvilcraft.skyland.mixin.plugin.SkylandMixinPlugin",
   "injectors": {
     "defaultRequire": 1
   }

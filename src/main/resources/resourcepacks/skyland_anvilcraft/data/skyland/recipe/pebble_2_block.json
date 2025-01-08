@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "skyland:pebble"
+    },
+    {
+      "item": "skyland:pebble"
+    },
+    {
+      "item": "skyland:pebble"
+    },
+    {
+      "item": "skyland:pebble"
+    },
+    {
+      "item": "skyland:pebble"
+    },
+    {
+      "item": "skyland:pebble"
+    },
+    {
+      "item": "skyland:pebble"
+    },
+    {
+      "item": "skyland:pebble"
+    },
+    {
+      "item": "skyland:pebble"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:cobblestone"
+  }
+}

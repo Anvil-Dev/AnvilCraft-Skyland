@@ -1,0 +1,10 @@
+{
+  "values": {
+    "skyland:bamboo_leaves": {
+      "chance": 0.3
+    },
+    "skyland:moss": {
+      "chance": 0.3
+    }
+  }
+}

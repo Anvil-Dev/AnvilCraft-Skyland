@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "item": "skyland:pebble"
+    },
+    "X": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "pattern": [
+    "XXX",
+    " K ",
+    "KKK"
+  ],
+  "result": {
+    "count": 1,
+    "id": "skyland:stone_anvil"
+  }
+}
