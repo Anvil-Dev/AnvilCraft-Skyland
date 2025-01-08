@@ -1,6 +1,6 @@
-// 1.21.1	2025-01-09T03:50:55.6761263	Registrate Provider for skyland [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
-39ffe908deae27ff3e38848fe71ff4115f654128 assets/skyland/lang/en_ud.json
-ac2ada9fe4cae541e6c0f4470c44f5318809556f assets/skyland/lang/en_us.json
+// 1.21.1	2025-01-09T05:09:56.4336735	Registrate Provider for skyland [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+14dc27808027af2647ba666761ef3a0db40e4827 assets/skyland/lang/en_ud.json
+ba3841ff0e741bc993314a51e2864febda4999de assets/skyland/lang/en_us.json
 6484dff9272eb5bb3727f31851db0c9edd469ba4 assets/skyland/models/item/bamboo_leaves.json
 c018d6c61ffd59251281b2b9a10abd7febb6c93d assets/skyland/models/item/moss.json
 9ee86ccf1c12338ad5f69dd3b26912d9333dbd05 assets/skyland/models/item/pebble.json
