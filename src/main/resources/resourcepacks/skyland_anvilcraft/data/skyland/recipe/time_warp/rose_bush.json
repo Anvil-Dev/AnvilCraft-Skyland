@@ -1,0 +1,21 @@
+{
+  "type": "anvilcraft:time_warp",
+  "cauldron": "minecraft:cauldron",
+  "consume_fluid": false,
+  "from_water": false,
+  "ingredients": [
+    {
+      "item": "minecraft:poppy"
+    }
+  ],
+  "produce_fluid": false,
+  "results": [
+    {
+      "amount": 1.0,
+      "stack": {
+        "count": 1,
+        "id": "minecraft:rose_bush"
+      }
+    }
+  ]
+}

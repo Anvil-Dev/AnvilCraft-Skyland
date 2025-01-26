@@ -1,10 +1,10 @@
-// 1.21.1	2025-01-09T05:09:56.4336735	Registrate Provider for skyland [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+// 1.21.1	2025-01-26T21:00:35.9917566	Registrate Provider for skyland [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
 14dc27808027af2647ba666761ef3a0db40e4827 assets/skyland/lang/en_ud.json
 ba3841ff0e741bc993314a51e2864febda4999de assets/skyland/lang/en_us.json
 6484dff9272eb5bb3727f31851db0c9edd469ba4 assets/skyland/models/item/bamboo_leaves.json
 c018d6c61ffd59251281b2b9a10abd7febb6c93d assets/skyland/models/item/moss.json
 9ee86ccf1c12338ad5f69dd3b26912d9333dbd05 assets/skyland/models/item/pebble.json
 c6d7dce88ddcea5dfb21d8a959c0b8afdd177776 assets/skyland/models/item/stone_anvil.json
+3cd84fdd17256960015ab90c2d5c748701c56e0f data/anvilcraft/tags/block/non_magnetic.json
 3cd84fdd17256960015ab90c2d5c748701c56e0f data/minecraft/tags/block/anvil.json
-c12b24c70cb5966a15c7ba7b811d6c18f070ec21 data/neoforge/data_maps/item/compostables.json
 67e4aa6525a5b59dc8abc1529709842351cb77da data/skyland/loot_table/blocks/stone_anvil.json

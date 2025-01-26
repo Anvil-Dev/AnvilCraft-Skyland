@@ -129,7 +129,7 @@ public class SkylandRGSettings {
     // 狐狸带着甜浆果生成的概率
     @Rule(
         categories = SkylandRGRuleCategories.SKYLAND,
-        allowed = {"0.025", "0.075", "0.25", "0.75", "1.0"},
+        allowed = {"0.0", "0.025", "0.075", "0.25", "0.75", "1.0"},
         validator = FoxesSpawnWithSweetBerriesChanceValidator.class
     )
     public static float foxesSpawnWithSweetBerriesChance = 0.0f;

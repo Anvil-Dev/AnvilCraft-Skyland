@@ -3,8 +3,18 @@ dependencies {
     api "com.tterrag.registrate:Registrate:${registrate_version}"
     jarJar "com.tterrag.registrate:Registrate:${registrate_version}"
 
+    // Cloth Config
+    implementation "me.shedaniel.cloth:cloth-config-neoforge:${cloth_config_version}"
+
+    // JEI
+    compileOnlyApi("mezz.jei:jei-1.21.1-common-api:${jei_version}") { transitive = false }
+    compileOnlyApi("mezz.jei:jei-1.21.1-neoforge-api:${jei_version}") { transitive = false }
+    implementation("mezz.jei:jei-1.21.1-neoforge:${jei_version}") { transitive = false }
+
     // AnvilCraft
-    implementation "dev.dubhe:anvilcraft-neoforge-1.21.1:${anvilcraft_version}"
+    implementation("dev.dubhe:anvilcraft-neoforge-1.21.1:${anvilcraft_version}"){
+        transitive = false
+    }
 
     // AnvilLib
     implementation "dev.anvilcraft.lib:anvillib-neoforge-1.21.1:${anvillib_version}"

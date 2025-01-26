@@ -12,7 +12,8 @@
     "PlacementContextMixin",
     "SinglePoolElementAccessor",
     "integration.anvilcraft.AxeItemMixin",
-    "integration.anvilcraft.HoeItemMixin"
+    "integration.anvilcraft.HoeItemMixin",
+    "integration.anvilcraft.BlockBehaviourMixin"
   ],
   "client": [
     "CreateWorldScreenMixin"

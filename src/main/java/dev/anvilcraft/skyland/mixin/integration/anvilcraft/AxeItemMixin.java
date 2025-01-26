@@ -2,6 +2,7 @@ package dev.anvilcraft.skyland.mixin.integration.anvilcraft;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import dev.anvilcraft.skyland.integration.anvilcraft.init.AnvilCraftIntegrationRegistries;
+import dev.anvilcraft.skyland.util.Constant;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -31,16 +32,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.Map;
 
 @Mixin(AxeItem.class)
-public class AxeItemMixin {
-    @Unique
-    private static final Map<Block, Block> REMOVE_MOSS = Map.of(
-        Blocks.MOSSY_COBBLESTONE, Blocks.COBBLESTONE,
-        Blocks.MOSSY_COBBLESTONE_SLAB, Blocks.COBBLESTONE_SLAB,
-        Blocks.MOSSY_COBBLESTONE_STAIRS, Blocks.COBBLESTONE_STAIRS,
-        Blocks.MOSSY_COBBLESTONE_WALL, Blocks.COBBLESTONE_WALL,
-        Blocks.MOSSY_STONE_BRICKS, Blocks.STONE_BRICKS
-    );
-
+abstract class AxeItemMixin {
     @Inject(
         method = "useOn",
         at = @At(
@@ -57,7 +49,7 @@ public class AxeItemMixin {
         @Local @NotNull BlockPos blockpos
     ) {
         BlockState state = level.getBlockState(blockpos);
-        Block to = REMOVE_MOSS.getOrDefault(state.getBlock(), null);
+        Block to = Constant.REMOVE_MOSS.getOrDefault(state.getBlock(), null);
         if (to == null) return;
         BlockState blockState = to.defaultBlockState();
         for (@SuppressWarnings("rawtypes") Property property : state.getProperties()) {
