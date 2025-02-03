@@ -2,11 +2,14 @@ package dev.anvilcraft.skyland.mixin.integration.anvilcraft;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import dev.anvilcraft.skyland.integration.anvilcraft.init.AnvilCraftIntegrationRegistries;
+import dev.dubhe.anvilcraft.init.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.HoeItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
@@ -36,6 +39,9 @@ abstract class HoeItemMixin {
         @Local @NotNull BlockPos pos,
         @Local @NotNull BlockState toolModifiedState
     ) {
+        ItemStack stack = context.getItemInHand();
+        if (stack.is(Items.WOODEN_HOE)) return;
+        if (stack.is(ModItems.AMETHYST_HOE)) return;
         if (!toolModifiedState.is(Blocks.FARMLAND)) return;
         RandomSource random = level.getRandom();
         if (random.nextDouble() > 0.6) return;
