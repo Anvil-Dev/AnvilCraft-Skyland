@@ -88,5 +88,5 @@ jobs:
 #          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
 #
 #          files: |
-#            build/libs/AnvilCraft-Skyland-forge-${{ steps.version.outputs.version }}.jar
-#            build/libs/AnvilCraft-Skyland-forge-${{ steps.version.outputs.version }}-sources.jar
+#            build/libs/AnvilCraft-Skyland-neoforge-${{ steps.version.outputs.version }}.jar
+#            build/libs/AnvilCraft-Skyland-neoforge-${{ steps.version.outputs.version }}-sources.jar
