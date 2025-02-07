@@ -11,7 +11,7 @@ jobs:
     env:
       CI_BUILD: false
       PR_BUILD: false
-      VERSION_TYPE: ${{ github.event.release.prerelease && 'alpha' || 'release' }}
+      VERSION_TYPE: ${{ github.event.release.prerelease && 'beta' || 'release' }}
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -45,14 +45,14 @@ jobs:
       - name: Get Version
         id: version
         run: |
-          MESSAGE=$(ls build/libs/* | grep sources.jar -v | grep shadow.jar -v | grep slim.jar -v | awk -F 'AnvilCraft-Skyland-neoforge-|.jar' '{print $2}')
+          MESSAGE=$(ls build/libs/* | grep sources.jar -v | grep shadow.jar -v | grep slim.jar -v | awk -F '${{ steps.properties.outputs.mod_name }}-neoforge-|.jar' '{print $2}')
           echo "version=$MESSAGE" >> $GITHUB_OUTPUT
 
       - name: capture build artifacts
         uses: actions/upload-artifact@v4.3.3
         with:
           name: "${{ steps.properties.outputs.mod_name }} ${{ steps.version.outputs.version }}"
-          path: build/libs/AnvilCraft-Skyland-neoforge-${{ steps.version.outputs.version }}.jar
+          path: build/libs/${{ steps.properties.outputs.mod_name }}-neoforge-${{ steps.version.outputs.version }}.jar
 
       - name: Publish to maven
         run: ./gradlew publish
@@ -66,7 +66,7 @@ jobs:
         uses: softprops/action-gh-release@v0.1.15
         with:
           files: |
-            build/libs/AnvilCraft-Skyland-neoforge-${{ steps.version.outputs.version }}.jar
+            build/libs/${{ steps.properties.outputs.mod_name }}-neoforge-${{ steps.version.outputs.version }}.jar
 
 #      - name: publish neoforge mc mod
 #        uses: Kir-Antipov/mc-publish@v3.3
@@ -79,6 +79,8 @@ jobs:
 #          java: 21
 #          fail-mode: skip
 #          changelog: ${{ github.event.release.body }}
+#          dependencies: |
+#            rolling_gate@1.0.0+build.32(required){modrinth:HXsmHiKu}{curseforge:1194894}
 #
 #          modrinth-id:
 #          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
@@ -88,5 +90,5 @@ jobs:
 #          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
 #
 #          files: |
-#            build/libs/AnvilCraft-Skyland-neoforge-${{ steps.version.outputs.version }}.jar
-#            build/libs/AnvilCraft-Skyland-neoforge-${{ steps.version.outputs.version }}-sources.jar
+#            build/libs/${{ steps.properties.outputs.mod_name }}-neoforge-${{ steps.version.outputs.version }}.jar
+#            build/libs/${{ steps.properties.outputs.mod_name }}-neoforge-${{ steps.version.outputs.version }}-sources.jar

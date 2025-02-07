@@ -1,4 +1,4 @@
-name: CI for AnvilCraft-Skyland Mod
+name: CI for Mod
 on:
   workflow_dispatch:
   push:
@@ -52,14 +52,14 @@ jobs:
       - name: Get Version
         id: version
         run: |
-          MESSAGE=$(ls build/libs/* | grep sources.jar -v | grep shadow.jar -v | grep slim.jar -v | awk -F 'AnvilCraft-Skyland-neoforge-|.jar' '{print $2}')
+          MESSAGE=$(ls build/libs/* | grep sources.jar -v | grep shadow.jar -v | grep slim.jar -v | awk -F '${{ steps.properties.outputs.mod_name }}-neoforge-|.jar' '{print $2}')
           echo "version=$MESSAGE" >> $GITHUB_OUTPUT
 
       - name: capture build artifacts
         uses: actions/upload-artifact@v4.3.3
         with:
           name: "${{ steps.properties.outputs.mod_name }} ${{ steps.version.outputs.version }}"
-          path: build/libs/AnvilCraft-Skyland-neoforge-${{ steps.version.outputs.version }}.jar
+          path: build/libs/${{ steps.properties.outputs.mod_name }}-neoforge-${{ steps.version.outputs.version }}.jar
 
       - name: Publish to maven
         run: ./gradlew publish
@@ -72,4 +72,28 @@ jobs:
       - name: gametest
         uses: Anvil-Dev/dedicated-server-launch-test@1.21.1-neoforge
         with:
-          mod: build/libs/AnvilCraft-Skyland-neoforge-${{ steps.version.outputs.version }}.jar
+          mod: build/libs/${{ steps.properties.outputs.mod_name }}-neoforge-${{ steps.version.outputs.version }}.jar
+
+#      - name: publish neoforge mc mod
+#        uses: Kir-Antipov/mc-publish@v3.3
+#        continue-on-error: true
+#        with:
+#          name: "${{ steps.properties.outputs.mod_name }} For NeoForge v${{ steps.version.outputs.version }}"
+#          version: ${{ steps.version.outputs.version }}
+#          game-versions: 1.21.1
+#          version-type: "alpha"
+#          java: 21
+#          fail-mode: skip
+#          dependencies: |
+#            rolling_gate@1.0.0+build.32(required){modrinth:HXsmHiKu}{curseforge:1194894}
+#
+#          modrinth-id:
+#          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+#          modrinth-featured: true
+#
+#          curseforge-id:
+#          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+#
+#          files: |
+#            build/libs/${{ steps.properties.outputs.mod_name }}-neoforge-${{ steps.version.outputs.version }}.jar
+#            build/libs/${{ steps.properties.outputs.mod_name }}-neoforge-${{ steps.version.outputs.version }}-sources.jar
