@@ -119,7 +119,7 @@ public class SkylandRGSettings {
     )
     public static boolean rammingWart = false;
 
-    static class FoxesSpawnWithSweetBerriesChanceValidator extends RGValidator.FloatValidator {
+    public static class FoxesSpawnWithSweetBerriesChanceValidator extends RGValidator.FloatValidator {
         @Override
         public Map.@NotNull Entry<Float, Float> getRange() {
             return Map.entry(0.0f, 1.0f);
@@ -251,7 +251,7 @@ public class SkylandRGSettings {
     )
     public static boolean spreadingCoral = false;
 
-    static class MaxWanderingTraderSpawnChanceValidator extends RGValidator.FloatValidator {
+    public static class MaxWanderingTraderSpawnChanceValidator extends RGValidator.FloatValidator {
         @Override
         public Map.@NotNull Entry<Float, Float> getRange() {
             return Map.entry(0.025f, 1.0f);
