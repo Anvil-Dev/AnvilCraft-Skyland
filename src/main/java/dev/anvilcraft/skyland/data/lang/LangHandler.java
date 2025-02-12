@@ -44,8 +44,8 @@ public class LangHandler {
         provider.add("skyland.rolling_gate.rule.renewable_dragon_heads.desc", "Renewable Dragon Heads");
         provider.add("skyland.rolling_gate.rule.renewable_diamonds", "Renewable Diamonds");
         provider.add("skyland.rolling_gate.rule.renewable_diamonds.desc", "Renewable Diamonds");
-        provider.add("skyland.rolling_gate.rule.ramming_wastes", "Ramming Wastes");
-        provider.add("skyland.rolling_gate.rule.ramming_wastes.desc", "Ramming Wastes");
+        provider.add("skyland.rolling_gate.rule.ramming_wart", "Ramming Wastes");
+        provider.add("skyland.rolling_gate.rule.ramming_wart.desc", "Ramming Wastes");
         provider.add("skyland.rolling_gate.rule.foxes_spawn_with_sweet_berries_chance", "Foxes Spawn With Sweet Berries Chance");
         provider.add("skyland.rolling_gate.rule.foxes_spawn_with_sweet_berries_chance.desc", "Foxes Spawn With Sweet Berries Chance");
         provider.add("skyland.rolling_gate.rule.poisonous_potatoes_convert_spiders", "Poisonous Potatoes Convert Spiders");
