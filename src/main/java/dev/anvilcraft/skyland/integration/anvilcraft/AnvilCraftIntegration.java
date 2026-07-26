@@ -1,6 +1,6 @@
 package dev.anvilcraft.skyland.integration.anvilcraft;
 
-import dev.anvilcraft.lib.integration.Integration;
+import dev.anvilcraft.lib.v2.integration.Integration;
 import dev.anvilcraft.skyland.integration.anvilcraft.event.AnvilEventListener;
 import dev.anvilcraft.skyland.integration.anvilcraft.init.AnvilCraftIntegrationRegistries;
 import net.neoforged.neoforge.common.NeoForge;

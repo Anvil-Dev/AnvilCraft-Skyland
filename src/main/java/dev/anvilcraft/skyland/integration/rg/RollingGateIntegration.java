@@ -1,6 +1,6 @@
 package dev.anvilcraft.skyland.integration.rg;
 
-import dev.anvilcraft.lib.integration.Integration;
+import dev.anvilcraft.lib.v2.integration.Integration;
 import dev.anvilcraft.rg.api.server.TranslationUtil;
 import dev.anvilcraft.skyland.integration.rg.event.RollingGateEventListener;
 import net.neoforged.neoforge.common.NeoForge;

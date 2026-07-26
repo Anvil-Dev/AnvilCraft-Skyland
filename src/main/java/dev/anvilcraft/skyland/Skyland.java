@@ -2,7 +2,7 @@ package dev.anvilcraft.skyland;
 
 import com.mojang.logging.LogUtils;
 import com.tterrag.registrate.Registrate;
-import dev.anvilcraft.lib.integration.IntegrationManager;
+import dev.anvilcraft.lib.v2.integration.IntegrationManager;
 import dev.anvilcraft.skyland.data.SkylandDatagen;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;

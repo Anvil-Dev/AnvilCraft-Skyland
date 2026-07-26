@@ -54,8 +54,8 @@ repositories {
         url "https://maven.k-4u.nl"
     }
     maven { // Curios API
-        name = "OctoStudios Maven"
-        url = uri("https://maven.octo-studios.com/releases")
+        name = "Theillusivec4 Maven"
+        url = "https://maven.theillusivec4.top/"
     }
     maven {
         url "https://maven.su5ed.dev/releases"
