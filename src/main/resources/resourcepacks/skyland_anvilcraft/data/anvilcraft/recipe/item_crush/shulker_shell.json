@@ -1,0 +1,13 @@
+﻿{
+  "type": "anvilcraft:item_crush",
+  "ingredients": [
+    {
+      "items": "minecraft:shulker_box"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:shulker_shell"
+    }
+  ]
+}

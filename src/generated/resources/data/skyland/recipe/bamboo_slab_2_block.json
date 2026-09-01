@@ -1,17 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
     "X": {
-      "item": "minecraft:bamboo"
+      "item": "minecraft:bamboo_slab"
     }
   },
   "pattern": [
-    "XX",
     "XX"
   ],
   "result": {
     "count": 1,
-    "id": "minecraft:bamboo_slab"
+    "id": "minecraft:bamboo_planks"
   }
 }

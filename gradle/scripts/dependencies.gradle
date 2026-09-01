@@ -1,7 +1,7 @@
 dependencies {
     // Registrate
-    api "com.tterrag.registrate:Registrate:${registrate_version}"
-    jarJar "com.tterrag.registrate:Registrate:${registrate_version}"
+    //api "com.tterrag.registrate:Registrate:${registrate_version}"
+    //jarJar "com.tterrag.registrate:Registrate:${registrate_version}"
 
     // Cloth Config
     implementation "me.shedaniel.cloth:cloth-config-neoforge:${cloth_config_version}"
@@ -24,5 +24,5 @@ dependencies {
     implementation "dev.anvilcraft.rg:RollingGate:${rolling_gate_version}"
 
     // Curios API
-    implementation "top.theillusivec4.curios:curios-neoforge:${curios_version}"
+    // implementation "top.theillusivec4.curios:curios-neoforge:${curios_version}"
 }

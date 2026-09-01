@@ -11,7 +11,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
 import org.jetbrains.annotations.NotNull;
 
-@EventBusSubscriber(modid = Skyland.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = Skyland.MOD_ID)
 public class ModPacks {
     @SubscribeEvent
     public static void packSetup(@NotNull AddPackFindersEvent event) {

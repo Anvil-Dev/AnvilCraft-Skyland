@@ -31,7 +31,7 @@ jobs:
         uses: christian-draeger/read-properties@1.1.1
         with:
           path: gradle.properties
-          properties: 'mod_id mod_name java_version rolling_gate_version'
+          properties: 'mod_id mod_name java_version rolling_gate_version anvilcraft_version'
 
       - name: Setup Java ${{ steps.properties.outputs.java_version }}
         uses: actions/setup-java@v3.6.0
@@ -65,4 +65,4 @@ jobs:
         uses: Anvil-Dev/dedicated-server-launch-test@1.21.1-neoforge
         with:
           mod: build/libs/${{ steps.properties.outputs.mod_name }}-neoforge-1.21.1-${{ steps.version.outputs.version }}.jar
-          extra-mods: rolling-gate:${{ steps.properties.outputs.rolling_gate_version }} anvilcraft:1.5.0+pre-release.9
+          extra-mods: rolling-gate:${{ steps.properties.outputs.rolling_gate_version }} anvilcraft:${{ steps.properties.outputs.anvilcraft_version }}

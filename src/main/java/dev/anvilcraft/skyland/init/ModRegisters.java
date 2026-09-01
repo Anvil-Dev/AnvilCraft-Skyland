@@ -9,7 +9,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.registries.RegisterEvent;
 import org.jetbrains.annotations.NotNull;
 
-@EventBusSubscriber(modid = Skyland.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = Skyland.MOD_ID)
 public class ModRegisters {
     @SubscribeEvent
     public static void register(@NotNull RegisterEvent event) {

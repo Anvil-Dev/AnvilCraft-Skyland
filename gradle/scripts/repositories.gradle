@@ -3,7 +3,7 @@ repositories {
     mavenCentral()
     maven { // Anvil Lib
         name = "Cjsah Maven"
-        url = "https://server.cjsah.net:1002/maven/"
+        url = "https://server.cjsah.net:1002/maven/releases"
     }
     maven { // Modrinth File, LazyDFU, Jade
         name = "Modrinth Maven"
@@ -67,5 +67,13 @@ repositories {
     maven {  // ForgeConfigAPIPort
         name = "ForgeConfigAPIPort Maven"
         url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+    }
+    maven { // location of the maven that hosts JEI files since January 2023
+        name = "Jared's maven"
+        url = "https://maven.blamejared.com/"
+    }
+    maven { // location of a maven mirror for JEI files, as a fallback
+        name = "ModMaven"
+        url = "https://modmaven.dev"
     }
 }

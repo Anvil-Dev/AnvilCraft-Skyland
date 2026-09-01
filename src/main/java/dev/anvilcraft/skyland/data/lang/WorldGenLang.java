@@ -3,12 +3,10 @@ package dev.anvilcraft.skyland.data.lang;
 import dev.anvilcraft.lib.v2.registrum.providers.RegistrumLangProvider;
 
 /**
- * 语言文件生成入口
+ * 世界生成相关语言
  */
-public class LangHandler {
+public class WorldGenLang {
     public static void init(RegistrumLangProvider provider) {
-        WorldGenLang.init(provider);
-        PackLang.init(provider);
-        RollingGateLang.init(provider);
+        provider.add("generator.skyland.skyland", "Skyland");
     }
 }

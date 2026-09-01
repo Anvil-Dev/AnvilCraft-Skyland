@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
-    "K": {
-      "item": "skyland:pebble"
-    },
-    "X": {
+    "A": {
       "item": "minecraft:cobblestone"
+    },
+    "B": {
+      "item": "skyland:pebble"
     }
   },
   "pattern": [
-    "XXX",
-    " K ",
-    "KKK"
+    "AAA",
+    " B ",
+    "BBB"
   ],
   "result": {
     "count": 1,

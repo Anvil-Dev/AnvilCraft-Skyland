@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_moss": {
+      "conditions": {
+        "items": [
+          {
+            "items": "skyland:moss"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "skyland:moss_2_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_moss"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "skyland:moss_2_block"
+    ]
+  }
+}

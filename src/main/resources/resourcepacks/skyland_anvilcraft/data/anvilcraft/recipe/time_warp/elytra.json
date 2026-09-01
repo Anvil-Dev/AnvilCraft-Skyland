@@ -1,0 +1,27 @@
+﻿{
+  "type": "anvilcraft:time_warp",
+  "ingredients": [
+    {
+      "count": 4,
+      "items": "minecraft:bone"
+    },
+    {
+      "count": 8,
+      "items": "minecraft:phantom_membrane"
+    },
+    {
+      "items": "anvilcraft:levitation_powder"
+    },
+    {
+      "items": "minecraft:egg"
+    },
+    {
+      "items": "minecraft:slime_ball"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:elytra"
+    }
+  ]
+}

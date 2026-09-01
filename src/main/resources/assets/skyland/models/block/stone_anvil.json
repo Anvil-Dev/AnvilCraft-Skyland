@@ -3,10 +3,10 @@
 	"render_type": "minecraft:cutout",
 	"parent": "block/block",
 	"textures": {
-		"0": "anvilcraft_skyland:block/stone_anvil_bottom",
-		"1": "anvilcraft_skyland:block/stone_anvil_side",
-		"2": "anvilcraft_skyland:block/stone_anvil_top",
-		"particle": "anvilcraft_skyland:block/stone_anvil_bottom"
+		"0": "skyland:block/stone_anvil_bottom",
+		"1": "skyland:block/stone_anvil_side",
+		"2": "skyland:block/stone_anvil_top",
+		"particle": "skyland:block/stone_anvil_bottom"
 	},
 	"elements": [
 		{

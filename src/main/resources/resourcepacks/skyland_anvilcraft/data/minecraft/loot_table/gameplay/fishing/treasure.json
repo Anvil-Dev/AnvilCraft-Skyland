@@ -1,0 +1,92 @@
+﻿{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:name_tag"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:saddle"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.25,
+                "min": 0.0
+              },
+              "function": "minecraft:set_damage"
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30.0,
+              "options": "#minecraft:on_random_loot"
+            }
+          ],
+          "name": "minecraft:bow"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.25,
+                "min": 0.0
+              },
+              "function": "minecraft:set_damage"
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30.0,
+              "options": "#minecraft:on_random_loot"
+            }
+          ],
+          "name": "minecraft:fishing_rod"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30.0,
+              "options": "#minecraft:on_random_loot"
+            }
+          ],
+          "name": "minecraft:book"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:nautilus_shell"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "anvilcraft:sponge_gemmule",
+          "weight": 1,
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:warm_ocean"
+              }
+            },
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.0001
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "minecraft:gameplay/fishing/treasure"
+}
