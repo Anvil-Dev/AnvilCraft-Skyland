@@ -1,4 +1,4 @@
-﻿{
+{
   "type": "anvilcraft:time_warp",
   "ingredients": [
     {
@@ -10,13 +10,13 @@
       "items": "minecraft:phantom_membrane"
     },
     {
-      "items": "anvilcraft:levitation_powder"
-    },
-    {
       "items": "minecraft:egg"
     },
     {
       "items": "minecraft:slime_ball"
+    },
+    {
+      "items": "anvilcraft:levitation_powder"
     }
   ],
   "results": [

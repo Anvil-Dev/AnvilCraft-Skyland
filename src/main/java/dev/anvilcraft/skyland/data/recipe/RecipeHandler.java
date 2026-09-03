@@ -8,5 +8,7 @@ import dev.anvilcraft.lib.v2.registrum.providers.RegistrumRecipeProvider;
 public class RecipeHandler {
     public static void init(RegistrumRecipeProvider provider) {
         AnvilCraftRecipeLoader.init(provider);
+        TimeWarpRecipeLoader.init(provider);
+        ItemCrushRecipeLoader.init(provider);
     }
 }
