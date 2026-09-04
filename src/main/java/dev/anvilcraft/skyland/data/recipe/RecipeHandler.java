@@ -10,5 +10,6 @@ public class RecipeHandler {
         AnvilCraftRecipeLoader.init(provider);
         TimeWarpRecipeLoader.init(provider);
         ItemCrushRecipeLoader.init(provider);
+        SolidLiquidRecipeLoader.init(provider);
     }
 }

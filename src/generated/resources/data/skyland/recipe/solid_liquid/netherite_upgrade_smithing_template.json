@@ -1,0 +1,15 @@
+{
+  "type": "anvilcraft:solid_liquid",
+  "consume": 1000,
+  "fluid": "minecraft:powder_snow",
+  "ingredients": [
+    {
+      "items": "anvilcraft:ember_metal_upgrade_smithing_template"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:netherite_upgrade_smithing_template"
+    }
+  ]
+}
