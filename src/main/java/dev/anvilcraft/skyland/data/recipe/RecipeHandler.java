@@ -11,5 +11,6 @@ public class RecipeHandler {
         TimeWarpRecipeLoader.init(provider);
         ItemCrushRecipeLoader.init(provider);
         SolidLiquidRecipeLoader.init(provider);
+        CoolingRecipeLoader.init(provider);
     }
 }
