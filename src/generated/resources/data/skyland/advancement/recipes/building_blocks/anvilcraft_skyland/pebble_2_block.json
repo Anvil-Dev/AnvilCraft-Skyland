@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_moss": {
+    "has_pebble": {
       "conditions": {
         "items": [
           {
-            "items": "skyland:moss"
+            "items": "skyland:pebble"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "skyland:moss_2_block"
+        "recipe": "skyland:anvilcraft_skyland/pebble_2_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_moss"
+      "has_pebble"
     ]
   ],
   "rewards": {
     "recipes": [
-      "skyland:moss_2_block"
+      "skyland:anvilcraft_skyland/pebble_2_block"
     ]
   }
 }

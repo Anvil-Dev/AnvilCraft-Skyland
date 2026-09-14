@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "skyland:bamboo_slab_2_block"
+        "recipe": "skyland:anvilcraft_skyland/bamboo_slab_2_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "skyland:bamboo_slab_2_block"
+      "skyland:anvilcraft_skyland/bamboo_slab_2_block"
     ]
   }
 }

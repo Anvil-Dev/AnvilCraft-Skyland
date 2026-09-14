@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_pebble": {
+    "has_ember_metal_upgrade_smithing_template": {
       "conditions": {
         "items": [
           {
-            "items": "skyland:pebble"
+            "items": "anvilcraft:ember_metal_upgrade_smithing_template"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "skyland:stone_anvil"
+        "recipe": "skyland:anvilcraft_skyland/cooling_ember_metal_upgrade_smithing_template"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_pebble"
+      "has_ember_metal_upgrade_smithing_template"
     ]
   ],
   "rewards": {
     "recipes": [
-      "skyland:stone_anvil"
+      "skyland:anvilcraft_skyland/cooling_ember_metal_upgrade_smithing_template"
     ]
   }
 }

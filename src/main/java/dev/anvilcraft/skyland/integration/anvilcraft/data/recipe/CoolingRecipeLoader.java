@@ -1,7 +1,8 @@
-package dev.anvilcraft.skyland.data.recipe;
+package dev.anvilcraft.skyland.integration.anvilcraft.data.recipe;
 
 import dev.anvilcraft.lib.v2.recipe.init.recipe.LibRecipeTriggers;
 import dev.anvilcraft.lib.v2.registrum.providers.RegistrumRecipeProvider;
+import dev.anvilcraft.skyland.Skyland;
 import dev.dubhe.anvilcraft.AnvilCraft;
 import dev.dubhe.anvilcraft.init.item.ModItems;
 import dev.dubhe.anvilcraft.recipe.anvil.builder.ExtendInWorldRecipeBuilder;
@@ -19,6 +20,6 @@ public class CoolingRecipeLoader {
                 SkylandRecipeProvider.has(ModItems.EMBER_METAL_UPGRADE_SMITHING_TEMPLATE)
             )
             .group("cooling")
-            .save(provider, AnvilCraft.of("cooling_ember_metal_upgrade_smithing_template"));
+            .save(provider, Skyland.of("cooling_ember_metal_upgrade_smithing_template").withPrefix("anvilcraft_skyland/"));
     }
 }

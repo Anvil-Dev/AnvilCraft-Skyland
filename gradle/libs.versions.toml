@@ -1,0 +1,27 @@
+[versions]
+minecraft = "1.21.1"
+neoForge = "21.1.249"
+parchment = "2024.11.17"
+
+anvillib = "2.0.0+snapshot.524"
+rollingGate = "1.1.0+build.66"
+
+anvilcraft = "1.6.0+snapshot.2294"
+jei = "19.50.0.414"
+
+modDevGradle = "2.0.144"
+lombok = "8.7.1"
+
+[libraries]
+anvillib-recipe = { group = "dev.anvilcraft.lib", name = "anvillib-recipe-neoforge-1.21.1", version.ref = "anvillib" }
+anvillib-moveableEntityBlock = { group = "dev.anvilcraft.lib", name = "anvillib-moveable-entity-block-neoforge-1.21.1", version.ref = "anvillib" }
+anvillib = { group = "dev.anvilcraft.lib", name = "anvillib-neoforge-1.21.1", version.ref = "anvillib" }
+rollingGate = { group = "dev.anvilcraft.rg", name = "RollingGate", version.ref = "rollingGate" }
+anvilcraft = { group = "dev.dubhe", name = "anvilcraft-neoforge-1.21.1", version.ref = "anvilcraft" }
+jei-common-api = { group = "mezz.jei", name = "jei-1.21.1-common-api", version.ref = "jei" }
+jei-neoforge-api = { group = "mezz.jei", name = "jei-1.21.1-neoforge-api", version.ref = "jei" }
+jei-neoforge = { group = "mezz.jei", name = "jei-1.21.1-neoforge", version.ref = "jei" }
+
+[plugins]
+modDevGradle = { id = "net.neoforged.moddev", version.ref = "modDevGradle" }
+lombok = { id = "io.freefair.lombok", version.ref = "lombok" }

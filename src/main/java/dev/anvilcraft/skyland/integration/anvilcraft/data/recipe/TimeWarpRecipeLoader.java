@@ -1,4 +1,4 @@
-package dev.anvilcraft.skyland.data.recipe;
+package dev.anvilcraft.skyland.integration.anvilcraft.data.recipe;
 
 import dev.anvilcraft.lib.v2.registrum.providers.RegistrumRecipeProvider;
 import dev.anvilcraft.skyland.Skyland;
@@ -18,6 +18,6 @@ public class TimeWarpRecipeLoader {
             .requires(Items.SLIME_BALL)
             .requires(ModItems.LEVITATION_POWDER)
             .result(Items.ELYTRA)
-            .save(provider, Skyland.of("time_warp/elytra"));
+            .save(provider, Skyland.of("time_warp/elytra").withPrefix("anvilcraft_skyland/"));
     }
 }

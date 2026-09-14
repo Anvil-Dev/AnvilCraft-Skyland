@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "skyland:item_crush/shulker_shell"
+        "recipe": "skyland:anvilcraft_skyland/solid_liquid/netherite_upgrade_smithing_template"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -15,7 +15,7 @@
   ],
   "rewards": {
     "recipes": [
-      "skyland:item_crush/shulker_shell"
+      "skyland:anvilcraft_skyland/solid_liquid/netherite_upgrade_smithing_template"
     ]
   }
 }

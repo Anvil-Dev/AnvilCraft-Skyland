@@ -21,7 +21,7 @@ public class ModPacks {
                 PackType.SERVER_DATA,
                 Component.translatable("pack.skyland.builtin_pack"),
                 PackSource.FEATURE,
-                false,
+                ModList.get().isLoaded("anvilcraft"),
                 Pack.Position.TOP
             );
         }
@@ -38,7 +38,7 @@ public class ModPacks {
             PackType.SERVER_DATA,
             Component.translatable("pack.skyland.builtin_pack"),
             PackSource.FEATURE,
-            false,
+            !ModList.get().isLoaded("anvilcraft"),
             Pack.Position.TOP
         );
     }

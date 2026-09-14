@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "skyland:time_warp/elytra"
+        "recipe": "skyland:anvilcraft_skyland/time_warp/elytra"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -15,7 +15,7 @@
   ],
   "rewards": {
     "recipes": [
-      "skyland:time_warp/elytra"
+      "skyland:anvilcraft_skyland/time_warp/elytra"
     ]
   }
 }

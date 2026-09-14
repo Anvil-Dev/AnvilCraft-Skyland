@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ember_metal_upgrade_smithing_template": {
+    "has_bamboo": {
       "conditions": {
         "items": [
           {
-            "items": "anvilcraft:ember_metal_upgrade_smithing_template"
+            "items": "minecraft:bamboo"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "anvilcraft:cooling_ember_metal_upgrade_smithing_template"
+        "recipe": "skyland:anvilcraft_skyland/bamboo_2_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_ember_metal_upgrade_smithing_template"
+      "has_bamboo"
     ]
   ],
   "rewards": {
     "recipes": [
-      "anvilcraft:cooling_ember_metal_upgrade_smithing_template"
+      "skyland:anvilcraft_skyland/bamboo_2_slab"
     ]
   }
 }

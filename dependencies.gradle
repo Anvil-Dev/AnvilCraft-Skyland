@@ -1,0 +1,20 @@
+dependencies {
+    // JEI
+    compileOnly(libs.jei.common.api) { transitive = false }
+    compileOnly(libs.jei.neoforge.api) { transitive = false }
+    compileOnly(libs.jei.neoforge) { transitive = false }
+    runtimeOnly(libs.jei.neoforge) { transitive = false }
+    // AnvilCraft
+    implementation(libs.anvilcraft) {
+        transitive = false
+    }
+
+    // AnvilLib
+    api(libs.anvillib)
+    interfaceInjectionData(libs.anvillib.recipe)
+    interfaceInjectionData(libs.anvillib.moveableEntityBlock)
+    jarJar(libs.anvillib)
+
+    // Rolling Gate
+    implementation(libs.rollingGate)
+}

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "skyland:pebble_2_block"
+        "recipe": "skyland:anvilcraft_skyland/stone_anvil"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "skyland:pebble_2_block"
+      "skyland:anvilcraft_skyland/stone_anvil"
     ]
   }
 }

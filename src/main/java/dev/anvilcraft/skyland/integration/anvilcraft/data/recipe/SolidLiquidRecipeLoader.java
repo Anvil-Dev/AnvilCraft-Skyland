@@ -1,8 +1,7 @@
-package dev.anvilcraft.skyland.data.recipe;
+package dev.anvilcraft.skyland.integration.anvilcraft.data.recipe;
 
 import dev.anvilcraft.lib.v2.registrum.providers.RegistrumRecipeProvider;
 import dev.anvilcraft.skyland.Skyland;
-import dev.dubhe.anvilcraft.AnvilCraft;
 import dev.dubhe.anvilcraft.init.block.ModFluids;
 import dev.dubhe.anvilcraft.init.item.ModComponents;
 import dev.dubhe.anvilcraft.init.item.ModItems;
@@ -24,7 +23,7 @@ public class SolidLiquidRecipeLoader {
             .consume(1000)
             .requires(ModItems.EMBER_METAL_UPGRADE_SMITHING_TEMPLATE, 1)
             .result(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE,1)
-            .save(provider, Skyland.of("solid_liquid/netherite_upgrade_smithing_template"));
+            .save(provider, Skyland.of("solid_liquid/netherite_upgrade_smithing_template").withPrefix("anvilcraft_skyland/"));
     }
 
     private static void solidLiquid(RegistrumRecipeProvider provider, ItemLike input, ItemLike result, int consume) {
@@ -82,6 +81,6 @@ public class SolidLiquidRecipeLoader {
             idBuilder.append("_and_");
         }
         String id = idBuilder.substring(0, idBuilder.length() - 5);
-        builder.save(provider, Skyland.of("solid_liquid/" + id));
+        builder.save(provider, Skyland.of("solid_liquid/" + id).withPrefix("anvilcraft_skyland/"));
     }
 }

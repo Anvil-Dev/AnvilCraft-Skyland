@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_bamboo": {
+    "has_moss": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:bamboo"
+            "items": "skyland:moss"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "skyland:bamboo_2_slab"
+        "recipe": "skyland:anvilcraft_skyland/moss_2_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_bamboo"
+      "has_moss"
     ]
   ],
   "rewards": {
     "recipes": [
-      "skyland:bamboo_2_slab"
+      "skyland:anvilcraft_skyland/moss_2_block"
     ]
   }
 }

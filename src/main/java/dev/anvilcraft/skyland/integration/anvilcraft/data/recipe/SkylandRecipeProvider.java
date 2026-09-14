@@ -1,4 +1,4 @@
-package dev.anvilcraft.skyland.data.recipe;
+package dev.anvilcraft.skyland.integration.anvilcraft.data.recipe;
 
 import dev.anvilcraft.lib.v2.registrum.providers.RegistrumRecipeProvider;
 import net.minecraft.advancements.Criterion;
