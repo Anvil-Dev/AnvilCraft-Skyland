@@ -13,15 +13,17 @@ import org.jetbrains.annotations.NotNull;
 
 @EventBusSubscriber(modid = Skyland.MOD_ID)
 public class ModPacks {
+    public static final Boolean ANVILCRAFT_HAS_LOADED = ModList.get().isLoaded("anvilcraft");
+
     @SubscribeEvent
     public static void packSetup(@NotNull AddPackFindersEvent event) {
-        if (ModList.get().isLoaded("anvilcraft")) {
+        if (ANVILCRAFT_HAS_LOADED) {
             event.addPackFinders(
                 Skyland.of("resourcepacks/skyland_anvilcraft"),
                 PackType.SERVER_DATA,
                 Component.translatable("pack.skyland.builtin_pack"),
                 PackSource.FEATURE,
-                ModList.get().isLoaded("anvilcraft"),
+                true,
                 Pack.Position.TOP
             );
         }
@@ -38,7 +40,7 @@ public class ModPacks {
             PackType.SERVER_DATA,
             Component.translatable("pack.skyland.builtin_pack"),
             PackSource.FEATURE,
-            !ModList.get().isLoaded("anvilcraft"),
+            !ANVILCRAFT_HAS_LOADED,
             Pack.Position.TOP
         );
     }

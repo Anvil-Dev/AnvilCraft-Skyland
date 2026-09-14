@@ -17,3 +17,13 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
     from "src/main/templates"
     into "build/generated/sources/modMetadata"
 }
+
+// 打包时将 src/generated/resources/data/skyland 下路径含有 anvilcraft_skyland/ 的 datagen 产物
+// 从 jar 根目录排除，改以 resourcepacks/skyland_anvilcraft/data/skyland/ 路径打进 jar（内置数据包）
+tasks.named('processResources', ProcessResources) {
+    exclude 'data/skyland/**/anvilcraft_skyland/**'
+    from('src/generated/resources/data/skyland') {
+        include '**/anvilcraft_skyland/**'
+        into 'resourcepacks/skyland_anvilcraft/data/skyland'
+    }
+}
