@@ -31,13 +31,24 @@ jobs:
         uses: christian-draeger/read-properties@1.1.1
         with:
           path: gradle.properties
-          properties: 'mod_id mod_name java_version rolling_gate_version anvilcraft_version'
+          properties: 'mod_id mod_name java_version'
 
       - name: Setup Java ${{ steps.properties.outputs.java_version }}
         uses: actions/setup-java@v3.6.0
         with:
           distribution: zulu
           java-version: ${{ steps.properties.outputs.java_version }}
+
+      - name: Read Versions
+        id: versions
+        uses: Gu-ZT/toml-reader-action@1.0.0
+        with:
+          file: gradle/libs.versions.toml
+          fields: |
+            versions.minecraft
+            versions.neoforge
+            versions.anvilcraft
+            versions.rollingGate
 
       - name: make gradle wrapper executable
         if: ${{ runner.os != 'Windows' }}
@@ -70,36 +81,39 @@ jobs:
         continue-on-error: true
 
       - name: gametest
-        uses: Anvil-Dev/dedicated-server-launch-test@1.21.1-neoforge
+        uses: Anvil-Dev/dedicated-server-launch-test@universal
+        continue-on-error: false
         with:
-          mods: |
-            build/libs/${{ steps.properties.outputs.mod_name }}-neoforge-1.21.1-${{ steps.version.outputs.version }}.jar
-          extra-mods: rolling-gate:${{ steps.properties.outputs.rolling_gate_version }}
+          mod_loader: neoforge
+          loader_version: ${{ steps.versions.outputs.versions_neoforge }}
+          mods: build/libs/${{ steps.properties.outputs.mod_id }}-neoforge-${{ steps.version.outputs.version }}.jar
           maven-repos: |
-            https://server.cjsah.net:1002/maven
+            https://server.cjsah.net:1002/maven/releases/
           maven-mods: |
-            dev.dubhe:anvilcraft-neoforge-1.21.1:${{ steps.properties.outputs.anvilcraft_version }}
-#      - name: publish neoforge mc mod
-#        uses: Kir-Antipov/mc-publish@v3.3
-#        continue-on-error: true
-#        with:
-#          name: "${{ steps.properties.outputs.mod_name }} For NeoForge v${{ steps.version.outputs.version }}"
-#          version: ${{ steps.version.outputs.version }}
-#          game-versions: 1.21.1
-#          version-type: "alpha"
-#          java: 21
-#          fail-mode: skip
-#          dependencies: |
-#            rolling_gate@${{ steps.properties.outputs.rolling_gate_version }}(optional){modrinth:HXsmHiKu}{curseforge:1194894}
-#            anvilcraft@1.4.2+pre-release.1(optional){modrinth:vuISAWPc}{curseforge:986251}
-#
+            dev.dubhe:anvilcraft-neoforge-1.21.1:${{ steps.versions.outputs.versions_anvilcraft }}
+            dev.anvilcraft.rg:RollingGate:${{ steps.versions.outputs.versions_rollingGate }}
+
+      - name: publish neoforge mc mod
+        uses: Kir-Antipov/mc-publish@v3.3
+        continue-on-error: true
+        with:
+          name: "${{ steps.properties.outputs.mod_name }} For NeoForge v${{ steps.version.outputs.version }}"
+          version: ${{ steps.version.outputs.version }}
+          game-versions: 1.21.1
+          version-type: "alpha"
+          java: 21
+          fail-mode: skip
+          dependencies: |
+            rolling_gate@${{ steps.versions.outputs.versions_rollingGate }}(optional){modrinth:HXsmHiKu}{curseforge:1194894}
+            anvilcraft@${{ steps.versions.outputs.versions_anvilcraft }}(optional){modrinth:vuISAWPc}{curseforge:986251}
+
 #          modrinth-id:
 #          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 #          modrinth-featured: true
-#
-#          curseforge-id:
-#          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
-#
-#          files: |
-#            build/libs/${{ steps.properties.outputs.mod_name }}-neoforge-1.21.1-${{ steps.version.outputs.version }}.jar
-#            build/libs/${{ steps.properties.outputs.mod_name }}-neoforge-1.21.1-${{ steps.version.outputs.version }}-sources.jar
+
+          curseforge-id: 1730155
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+
+          files: |
+            build/libs/${{ steps.properties.outputs.mod_name }}-neoforge-1.21.1-${{ steps.version.outputs.version }}.jar
+            build/libs/${{ steps.properties.outputs.mod_name }}-neoforge-1.21.1-${{ steps.version.outputs.version }}-sources.jar
