@@ -20,7 +20,3 @@ jar {
         rename { "${it}${fileSuffix}" }
     }
 }
-
-base {
-    archivesName = mod_name + "-neoforge-1.21.1"
-}
