@@ -78,7 +78,7 @@ jobs:
         with:
           mod_loader: neoforge
           loader_version: ${{ steps.versions.outputs.versions_neoforge }}
-          mods: build/libs/${{ steps.properties.outputs.mod_id }}-neoforge-${{ steps.version.outputs.version }}.jar
+          mods: build/libs/${{ steps.properties.outputs.mod_id }}-neoforge-1.21.1-${{ steps.version.outputs.version }}.jar
           maven-repos: |
             https://server.cjsah.net:1002/maven/releases/
           maven-mods: |
