@@ -13,7 +13,9 @@ dependencies {
     api(libs.anvillib)
     interfaceInjectionData(libs.anvillib.recipe)
     interfaceInjectionData(libs.anvillib.moveableEntityBlock)
-    jarJar(libs.anvillib)
+    jarJar(libs.anvillib.recipe)
+    jarJar(libs.anvillib.registrum)
+    jarJar(libs.anvillib.integration)
 
     // Rolling Gate
     implementation(libs.rollingGate)
