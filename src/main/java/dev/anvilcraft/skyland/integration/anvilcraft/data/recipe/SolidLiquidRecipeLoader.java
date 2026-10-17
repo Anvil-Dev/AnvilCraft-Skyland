@@ -17,12 +17,12 @@ import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.fluids.FluidStack;
 
 public class SolidLiquidRecipeLoader {
-    public static void init(RegistrumRecipeProvider provider){
+    public static void init(RegistrumRecipeProvider provider) {
         SolidLiquidRecipe.builder()
             .cauldron(ModFluids.POWDER_SNOW.get())
             .consume(1000)
             .requires(ModItems.EMBER_METAL_UPGRADE_SMITHING_TEMPLATE, 1)
-            .result(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE,1)
+            .result(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, 1)
             .save(provider, Skyland.of("solid_liquid/netherite_upgrade_smithing_template").withPrefix("anvilcraft_skyland/"));
     }
 

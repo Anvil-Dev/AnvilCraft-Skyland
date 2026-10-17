@@ -21,6 +21,6 @@ public class SpawnPlatformFeature extends Feature<SpawnPlatformFeatureConfigurat
         BlockPos origin = config.spawnRelative() ? context.origin().atY(0) : BlockPos.ZERO;
 
         return SkylandFeatures.LOCATABLE_STRUCTURE.place(
-                config.platformConfig(), context.level(), context.chunkGenerator(), context.random(), origin);
+            config.platformConfig(), context.level(), context.chunkGenerator(), context.random(), origin);
     }
 }

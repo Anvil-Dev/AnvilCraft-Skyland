@@ -27,7 +27,10 @@ public class RollingGateLang {
         provider.add("skyland.rolling_gate.rule.lava_from_wandering_trader", "Lava From Wandering Trader");
         provider.add("skyland.rolling_gate.rule.lava_from_wandering_trader.desc", "Lava From Wandering Trader");
         provider.add("skyland.rolling_gate.rule.lightning_electrifies_vines", "Lightning Electrifies Vines");
-        provider.add("skyland.rolling_gate.rule.lightning_electrifies_vines.desc", "The Lightning can also strike a Lightning Rod on the Glowstone.");
+        provider.add(
+            "skyland.rolling_gate.rule.lightning_electrifies_vines.desc",
+            "The Lightning can also strike a Lightning Rod on the Glowstone."
+        );
         provider.add("skyland.rolling_gate.rule.renewable_amethysts", "Renewable Amethysts");
         provider.add("skyland.rolling_gate.rule.renewable_amethysts.desc", "Renewable Amethysts");
         provider.add("skyland.rolling_gate.rule.gateways_spawn_chorus", "Gateways Spawn Chorus");
@@ -55,20 +58,35 @@ public class RollingGateLang {
         provider.add("skyland.rolling_gate.rule.huge_mushrooms_spread_mycelium", "Huge Mushrooms Spread Mycelium");
         provider.add("skyland.rolling_gate.rule.huge_mushrooms_spread_mycelium.desc", "Huge Mushrooms Spread Mycelium");
         provider.add("skyland.rolling_gate.rule.renewable_netherrack", "Renewable Netherrack");
-        provider.add("skyland.rolling_gate.rule.renewable_netherrack.desc", "What generates depends on the biome, with Nyliums generating in their respective forests and Netherrack elsewhere");
+        provider.add(
+            "skyland.rolling_gate.rule.renewable_netherrack.desc",
+            "What generates depends on the biome, with Nyliums generating in their respective forests and Netherrack elsewhere"
+        );
         provider.add("skyland.rolling_gate.rule.renewable_deepslate", "Renewable Deepslate");
         provider.add("skyland.rolling_gate.rule.renewable_deepslate.desc", "With no_splash: splash potion conversion is disabled.");
         provider.add("skyland.rolling_gate.rule.renewable_swift_sneak", "Renewable Swift Sneak");
         provider.add("skyland.rolling_gate.rule.renewable_swift_sneak.desc", "Renewable Swift Sneak");
         provider.add("skyland.rolling_gate.rule.sniffers_from_drowneds", "Sniffers From Drowneds");
-        provider.add("skyland.rolling_gate.rule.sniffers_from_drowneds.desc", "When they stomp Turtle Eggs, they replace them with the Sniffer Egg.");
+        provider.add(
+            "skyland.rolling_gate.rule.sniffers_from_drowneds.desc",
+            "When they stomp Turtle Eggs, they replace them with the Sniffer Egg."
+        );
         provider.add("skyland.rolling_gate.rule.suspicious_sniffers", "Suspicious Sniffers");
-        provider.add("skyland.rolling_gate.rule.suspicious_sniffers.desc", "When Sniffers dig Sand or Gravel in a structure where Suspicious Sand or Gravel generates, it will be converted.With no_iron: No Iron Nugget is dropped when Sniffers dig");
+        provider.add(
+            "skyland.rolling_gate.rule.suspicious_sniffers.desc",
+            "When Sniffers dig Sand or Gravel in a structure where Suspicious Sand or Gravel generates, it will be converted.With no_iron: No Iron Nugget is dropped when Sniffers dig"
+        );
         provider.add("skyland.rolling_gate.rule.spreading_small_dripleaves", "Spreading Small Dripleaves");
-        provider.add("skyland.rolling_gate.rule.spreading_small_dripleaves.desc", "Requires them to be on Clay, half-submerged, with the top at light level 5");
+        provider.add(
+            "skyland.rolling_gate.rule.spreading_small_dripleaves.desc",
+            "Requires them to be on Clay, half-submerged, with the top at light level 5"
+        );
         provider.add("skyland.rolling_gate.rule.spreading_coral", "Spreading Coral");
         provider.add("skyland.rolling_gate.rule.spreading_coral.desc", "Rate varies depending on location");
         provider.add("skyland.rolling_gate.rule.max_wandering_trader_spawn_chance", "Max Wandering Trader Spawn Chance");
-        provider.add("skyland.rolling_gate.rule.max_wandering_trader_spawn_chance.desc", "This starts at 0.025 and increases by 0.025 each time a trader spawn fails until the max chance is reached.");
+        provider.add(
+            "skyland.rolling_gate.rule.max_wandering_trader_spawn_chance.desc",
+            "This starts at 0.025 and increases by 0.025 each time a trader spawn fails until the max chance is reached."
+        );
     }
 }

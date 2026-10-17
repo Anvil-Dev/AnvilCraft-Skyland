@@ -18,13 +18,15 @@ import static dev.anvilcraft.skyland.Skyland.REGISTRUM;
 public class AnvilCraftIntegrationRegistries {
     @SuppressWarnings("unused")
     public static final RegistryEntry<CreativeModeTab, CreativeModeTab> TAB = REGISTRUM
-        .defaultCreativeTab("anvilcraft_skyland", builder -> builder.icon(AnvilCraftIntegrationRegistries.STONE_ANVIL::asStack)
-            .displayItems((ctx, entries) -> {
-            })
-            .withTabsBefore(
-                CreativeModeTabs.SPAWN_EGGS,
-                ModItemGroups.ANVILCRAFT_ITEMS.getKey()
-            ))
+        .defaultCreativeTab(
+            "anvilcraft_skyland", builder -> builder.icon(AnvilCraftIntegrationRegistries.STONE_ANVIL::asStack)
+                .displayItems((ctx, entries) -> {
+                })
+                .withTabsBefore(
+                    CreativeModeTabs.SPAWN_EGGS,
+                    ModItemGroups.ANVILCRAFT_ITEMS.getKey()
+                )
+        )
         .register();
 
     public static final BlockEntry<StoneAnvilBlock> STONE_ANVIL = REGISTRUM

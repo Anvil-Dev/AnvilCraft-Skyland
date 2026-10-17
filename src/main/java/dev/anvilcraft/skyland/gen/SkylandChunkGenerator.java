@@ -67,7 +67,8 @@ public class SkylandChunkGenerator extends NoiseBasedChunkGenerator {
             BiomeSource.CODEC.fieldOf("biome_source").forGetter(SkylandChunkGenerator::getBiomeSource),
             NoiseGeneratorSettings.CODEC
                 .fieldOf("settings")
-                .forGetter(SkylandChunkGenerator::generatorSettings))
+                .forGetter(SkylandChunkGenerator::generatorSettings)
+        )
         .apply(instance, instance.stable(SkylandChunkGenerator::new)));
 
 
@@ -95,7 +96,8 @@ public class SkylandChunkGenerator extends NoiseBasedChunkGenerator {
         @NotNull Blender blender,
         @NotNull RandomState random,
         @NotNull StructureManager structureManager,
-        @NotNull ChunkAccess chunk) {
+        @NotNull ChunkAccess chunk
+    ) {
         return CompletableFuture.completedFuture(chunk);
     }
 
@@ -107,7 +109,8 @@ public class SkylandChunkGenerator extends NoiseBasedChunkGenerator {
         @NotNull BiomeManager biomeManager,
         @NotNull StructureManager structureManager,
         @NotNull ChunkAccess chunk,
-        GenerationStep.@NotNull Carving step) {
+        GenerationStep.@NotNull Carving step
+    ) {
     }
 
     @Override
@@ -154,8 +157,10 @@ public class SkylandChunkGenerator extends NoiseBasedChunkGenerator {
                         try {
                             // Stronghold
                             if (structure instanceof StrongholdStructure
-                                && (SkylandSettings.generateEndPortals
-                                || SkylandSettings.generateSilverfishSpawners)) {
+                                && (
+                                    SkylandSettings.generateEndPortals
+                                    || SkylandSettings.generateSilverfishSpawners
+                                )) {
                                 level.setCurrentlyGenerating(structureNameSupplier);
                                 structureManager
                                     .startsForStructure(sectionPos, structure)
@@ -163,7 +168,7 @@ public class SkylandChunkGenerator extends NoiseBasedChunkGenerator {
                                         for (StructurePiece piece : structureStart.getPieces()) {
                                             if (piece.isCloseToChunk(chunkPos, 0)
                                                 && piece.getType()
-                                                == StructurePieceType.STRONGHOLD_PORTAL_ROOM) {
+                                                   == StructurePieceType.STRONGHOLD_PORTAL_ROOM) {
                                                 BoundingBox chunkBox =
                                                     ChunkGeneratorAccessor.getWritableArea(chunk);
                                                 if (SkylandSettings.generateEndPortals) {
@@ -193,8 +198,10 @@ public class SkylandChunkGenerator extends NoiseBasedChunkGenerator {
                                                     && piece instanceof PoolElementStructurePiece poolPiece) {
                                                     if (poolPiece.getElement()
                                                         instanceof SinglePoolElement singlePoolElement) {
-                                                        ResourceLocation pieceId = ((SinglePoolElementAccessor)
-                                                            singlePoolElement)
+                                                        ResourceLocation pieceId = (
+                                                            (SinglePoolElementAccessor)
+                                                                singlePoolElement
+                                                        )
                                                             .getTemplate()
                                                             .left()
                                                             .orElseThrow(AssertionError::new);
@@ -205,7 +212,8 @@ public class SkylandChunkGenerator extends NoiseBasedChunkGenerator {
                                                                     level,
                                                                     ChunkGeneratorAccessor.getWritableArea(
                                                                         chunk),
-                                                                    random);
+                                                                    random
+                                                                );
                                                         }
                                                     }
                                                 }
@@ -213,7 +221,7 @@ public class SkylandChunkGenerator extends NoiseBasedChunkGenerator {
                                         });
                                     // Ancient Cities
                                 } else if (SkylandSettings.generateAncientCityPortals
-                                    && startPool.is(ResourceLocation.withDefaultNamespace("ancient_city/city_center"))) {
+                                           && startPool.is(ResourceLocation.withDefaultNamespace("ancient_city/city_center"))) {
                                     level.setCurrentlyGenerating(structureNameSupplier);
                                     structureManager
                                         .startsForStructure(sectionPos, structure)
@@ -223,22 +231,25 @@ public class SkylandChunkGenerator extends NoiseBasedChunkGenerator {
                                                     && piece instanceof PoolElementStructurePiece poolPiece) {
                                                     if (poolPiece.getElement()
                                                         instanceof SinglePoolElement singlePoolElement) {
-                                                        ResourceLocation pieceId = ((SinglePoolElementAccessor)
-                                                            singlePoolElement)
+                                                        ResourceLocation pieceId = (
+                                                            (SinglePoolElementAccessor)
+                                                                singlePoolElement
+                                                        )
                                                             .getTemplate()
                                                             .left()
                                                             .orElseThrow(AssertionError::new);
                                                         if (pieceId.getNamespace()
-                                                            .equals("minecraft")
+                                                                .equals("minecraft")
                                                             && pieceId.getPath()
-                                                            .startsWith(
-                                                                "ancient_city/city_center/city_center")) {
+                                                                .startsWith(
+                                                                    "ancient_city/city_center/city_center")) {
                                                             new SkylandStructures.AncientCityPortalStructure(piece)
                                                                 .generate(
                                                                     level,
                                                                     ChunkGeneratorAccessor.getWritableArea(
                                                                         chunk),
-                                                                    random);
+                                                                    random
+                                                                );
                                                         }
                                                     }
                                                 }
@@ -246,7 +257,8 @@ public class SkylandChunkGenerator extends NoiseBasedChunkGenerator {
                                         });
                                 }
                                 //Trial Chambers
-                                else if (SkylandSettings.generateTrialChambers && startPool.is(ResourceLocation.withDefaultNamespace("trial_chambers/chamber/end"))) {
+                                else if (SkylandSettings.generateTrialChambers && startPool.is(ResourceLocation.withDefaultNamespace(
+                                    "trial_chambers/chamber/end"))) {
                                     level.setCurrentlyGenerating(structureNameSupplier);
                                     structureManager
                                         .startsForStructure(sectionPos, structure)
@@ -256,44 +268,49 @@ public class SkylandChunkGenerator extends NoiseBasedChunkGenerator {
                                                     && piece instanceof PoolElementStructurePiece poolPiece) {
                                                     if (poolPiece.getElement()
                                                         instanceof SinglePoolElement singlePoolElement) {
-                                                        ResourceLocation pieceId = ((SinglePoolElementAccessor)
-                                                            singlePoolElement)
+                                                        ResourceLocation pieceId = (
+                                                            (SinglePoolElementAccessor)
+                                                                singlePoolElement
+                                                        )
                                                             .getTemplate()
                                                             .left()
                                                             .orElseThrow(AssertionError::new);
                                                         if (pieceId.getNamespace()
-                                                            .equals("minecraft")
+                                                                .equals("minecraft")
                                                             && pieceId.getPath()
-                                                            .startsWith(
-                                                                "trial_chambers/corridor/entrance")) {
+                                                                .startsWith(
+                                                                    "trial_chambers/corridor/entrance")) {
                                                             new SkylandStructures.TrialChamberEntrance(piece)
                                                                 .generate(
                                                                     level,
                                                                     ChunkGeneratorAccessor.getWritableArea(
                                                                         chunk),
-                                                                    random);
+                                                                    random
+                                                                );
                                                         } else if (pieceId.getNamespace()
-                                                            .equals("minecraft")
-                                                            && pieceId.getPath()
-                                                            .startsWith(
-                                                                "trial_chambers/corridor/atrium")) {
+                                                                       .equals("minecraft")
+                                                                   && pieceId.getPath()
+                                                                       .startsWith(
+                                                                           "trial_chambers/corridor/atrium")) {
                                                             new SkylandStructures.TrialChamberAtrium(piece)
                                                                 .generate(
                                                                     level,
                                                                     ChunkGeneratorAccessor.getWritableArea(
                                                                         chunk),
-                                                                    random);
+                                                                    random
+                                                                );
                                                         } else if (pieceId.getNamespace()
-                                                            .equals("minecraft")
-                                                            && pieceId.getPath()
-                                                            .startsWith(
-                                                                "trial_chambers")) {
+                                                                       .equals("minecraft")
+                                                                   && pieceId.getPath()
+                                                                       .startsWith(
+                                                                           "trial_chambers")) {
                                                             new SkylandStructures.TrialChamber(piece)
                                                                 .generate(
                                                                     level,
                                                                     ChunkGeneratorAccessor.getWritableArea(
                                                                         chunk),
-                                                                    random);
+                                                                    random
+                                                                );
                                                         }
                                                     }
                                                 }
@@ -372,7 +389,8 @@ public class SkylandChunkGenerator extends NoiseBasedChunkGenerator {
         RandomState randomState = RandomState.create(
             generatorSettings().value(),
             level.registryAccess().registryOrThrow(Registries.NOISE).asLookup(),
-            level.getSeed());
+            level.getSeed()
+        );
         return super.getBaseHeight(x, z, heightmap, level, randomState);
     }
 }

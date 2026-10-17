@@ -40,7 +40,7 @@ abstract class EnderDragonFightMixin {
             if (portalLocation == null) {
                 int y = chunkGenerator.getBaseHeightInEquivalentNoiseWorld(
                     0, 0, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, level)
-                    - 1;
+                        - 1;
                 portalLocation = BlockPos.ZERO.atY(y);
             }
         }

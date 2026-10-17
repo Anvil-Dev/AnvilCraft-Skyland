@@ -40,6 +40,7 @@ public class LocatableStructureFeature extends Feature<LocatableStructureFeature
             null,
             new StructurePlaceSettings(),
             context.random(),
-            Block.UPDATE_CLIENTS);
+            Block.UPDATE_CLIENTS
+        );
     }
 }

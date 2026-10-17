@@ -28,12 +28,12 @@ public class SkylandStructures {
     protected record StructureOrientation(Rotation rotation, Mirror mirror) {
         private int applyXTransform(int x, int z, BoundingBox boundingBox) {
             if ((rotation == Rotation.NONE && mirror != Mirror.FRONT_BACK)
-                    || (rotation == Rotation.CLOCKWISE_180 && mirror == Mirror.FRONT_BACK)) {
+                || (rotation == Rotation.CLOCKWISE_180 && mirror == Mirror.FRONT_BACK)) {
                 return boundingBox.minX() + x;
             } else if (rotation == Rotation.NONE || rotation == Rotation.CLOCKWISE_180) {
                 return boundingBox.maxX() - x;
             } else if ((rotation == Rotation.COUNTERCLOCKWISE_90 && mirror != Mirror.LEFT_RIGHT)
-                    || (rotation == Rotation.CLOCKWISE_90 && mirror == Mirror.LEFT_RIGHT)) {
+                       || (rotation == Rotation.CLOCKWISE_90 && mirror == Mirror.LEFT_RIGHT)) {
                 return boundingBox.minX() + z;
             } else {
                 return boundingBox.maxX() - z;
@@ -42,12 +42,12 @@ public class SkylandStructures {
 
         private int applyZTransform(int x, int z, BoundingBox boundingBox) {
             if ((rotation == Rotation.NONE && mirror != Mirror.LEFT_RIGHT)
-                    || (rotation == Rotation.CLOCKWISE_180 && mirror == Mirror.LEFT_RIGHT)) {
+                || (rotation == Rotation.CLOCKWISE_180 && mirror == Mirror.LEFT_RIGHT)) {
                 return boundingBox.minZ() + z;
             } else if (rotation == Rotation.NONE || rotation == Rotation.CLOCKWISE_180) {
                 return boundingBox.maxZ() - z;
             } else if ((rotation == Rotation.CLOCKWISE_90 && mirror != Mirror.FRONT_BACK)
-                    || (rotation == Rotation.COUNTERCLOCKWISE_90 && mirror == Mirror.LEFT_RIGHT)) {
+                       || (rotation == Rotation.COUNTERCLOCKWISE_90 && mirror == Mirror.LEFT_RIGHT)) {
                 return boundingBox.minZ() + x;
             } else {
                 return boundingBox.maxZ() - x;
@@ -100,15 +100,16 @@ public class SkylandStructures {
         }
 
         protected void fillBlocks(
-                ServerLevelAccessor level,
-                BlockState block,
-                int minX,
-                int minY,
-                int minZ,
-                int maxX,
-                int maxY,
-                int maxZ,
-                BoundingBox bounds) {
+            ServerLevelAccessor level,
+            BlockState block,
+            int minX,
+            int minY,
+            int minZ,
+            int maxX,
+            int maxY,
+            int maxZ,
+            BoundingBox bounds
+        ) {
             for (int x = minX; x <= maxX; ++x) {
                 for (int y = minY; y <= maxY; ++y) {
                     for (int z = minZ; z <= maxZ; ++z) {
@@ -176,18 +177,19 @@ public class SkylandStructures {
 
             // Sculk Shrieker
             addBlock(
-                    level,
-                    Blocks.SCULK_SHRIEKER.defaultBlockState().setValue(SculkShriekerBlock.CAN_SUMMON, true),
-                    9,
-                    8,
-                    20,
-                    bounds);
+                level,
+                Blocks.SCULK_SHRIEKER.defaultBlockState().setValue(SculkShriekerBlock.CAN_SUMMON, true),
+                9,
+                8,
+                20,
+                bounds
+            );
         }
     }
 
 
     public static class TrialChamber extends SkyBlockStructure {
-        public TrialChamber(StructurePiece piece){
+        public TrialChamber(StructurePiece piece) {
             super(piece);
         }
 
@@ -204,6 +206,7 @@ public class SkylandStructures {
             EntityType.SILVERFISH
             // Add more entity types as needed
         };
+
         @Override
         public void generate(ServerLevelAccessor level, BoundingBox bounds, RandomSource random) {
 
@@ -214,7 +217,8 @@ public class SkylandStructures {
                     random.nextInt(5) - random.nextInt(5),
                     random.nextInt(5) - random.nextInt(5),
                     random.nextInt(5) - random.nextInt(5),
-                    bounds);
+                    bounds
+                );
             }
 
             if (random.nextInt(30) == 1) {
@@ -224,7 +228,8 @@ public class SkylandStructures {
                     random.nextInt(5) - random.nextInt(5),
                     random.nextInt(5) - random.nextInt(5),
                     random.nextInt(5) - random.nextInt(5),
-                    bounds);
+                    bounds
+                );
             }
 
             if (random.nextInt(16) == 1) {
@@ -234,7 +239,8 @@ public class SkylandStructures {
                     random.nextInt(5) - random.nextInt(5),
                     random.nextInt(5) - random.nextInt(5),
                     random.nextInt(5) - random.nextInt(5),
-                    bounds);
+                    bounds
+                );
 
 
                 level.getServer().submit(() -> {
@@ -253,7 +259,7 @@ public class SkylandStructures {
     }
 
     public static class TrialChamberEntrance extends SkyBlockStructure {
-        public TrialChamberEntrance(StructurePiece piece){
+        public TrialChamberEntrance(StructurePiece piece) {
             super(piece);
         }
 
@@ -266,14 +272,15 @@ public class SkylandStructures {
                 random.nextInt(5) - random.nextInt(5),
                 random.nextInt(5) - random.nextInt(5),
                 random.nextInt(5) - random.nextInt(5),
-                bounds);
+                bounds
+            );
 
         }
     }
 
 
     public static class TrialChamberAtrium extends SkyBlockStructure {
-        public TrialChamberAtrium(StructurePiece piece){
+        public TrialChamberAtrium(StructurePiece piece) {
             super(piece);
         }
 
@@ -282,11 +289,12 @@ public class SkylandStructures {
         public void generate(ServerLevelAccessor level, BoundingBox bounds, RandomSource random) {
             addBlock(
                 level,
-                Blocks.VAULT.defaultBlockState().setValue(VaultBlock.OMINOUS,true),
+                Blocks.VAULT.defaultBlockState().setValue(VaultBlock.OMINOUS, true),
                 random.nextInt(5) - random.nextInt(5),
                 random.nextInt(5) - random.nextInt(5),
                 random.nextInt(5) - random.nextInt(5),
-                bounds);
+                bounds
+            );
 
         }
     }
@@ -304,7 +312,7 @@ public class SkylandStructures {
         @Override
         public void generate(ServerLevelAccessor level, BoundingBox bounds, RandomSource random) {
             BlockPos.MutableBlockPos spawnerAbsolutePos =
-                    offsetPos(spawnerPos.getX(), spawnerPos.getY(), spawnerPos.getZ());
+                offsetPos(spawnerPos.getX(), spawnerPos.getY(), spawnerPos.getZ());
             if (bounds.isInside(spawnerAbsolutePos)) {
                 level.setBlock(spawnerAbsolutePos, Blocks.SPAWNER.defaultBlockState(), Block.UPDATE_CLIENTS);
                 BlockEntity blockEntity = level.getBlockEntity(spawnerAbsolutePos);

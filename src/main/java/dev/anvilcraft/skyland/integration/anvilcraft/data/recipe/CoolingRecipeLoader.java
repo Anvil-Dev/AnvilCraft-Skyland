@@ -3,7 +3,6 @@ package dev.anvilcraft.skyland.integration.anvilcraft.data.recipe;
 import dev.anvilcraft.lib.v2.recipe.init.recipe.LibRecipeTriggers;
 import dev.anvilcraft.lib.v2.registrum.providers.RegistrumRecipeProvider;
 import dev.anvilcraft.skyland.Skyland;
-import dev.dubhe.anvilcraft.AnvilCraft;
 import dev.dubhe.anvilcraft.init.item.ModItems;
 import dev.dubhe.anvilcraft.recipe.anvil.builder.ExtendInWorldRecipeBuilder;
 import net.minecraft.world.item.Items;
